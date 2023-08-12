@@ -6,6 +6,7 @@ from datetime import datetime
 import models
 import os
 
+
 class Testbasemodel(unittest.TestCase):
     """class created to do test cases
     for base_model module"""
