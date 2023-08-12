@@ -1,17 +1,16 @@
 #!/usr/bin/python3
 """ base_model is module containing the parent class 'BaseModel' """
 
-import uuid
-
-from datetime import datetime
 import models
+import uuid
+from datetime import datetime
 
 
 class BaseModel:
     """Creating The BaseModel Class"""
 
     def __init__(self, *args, **kwargs):
-        """Constructor"""
+        """Constructor method"""
 
         if kwargs:
             for key, value in kwargs.items():
