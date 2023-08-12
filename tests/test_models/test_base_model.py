@@ -57,6 +57,50 @@ class Testbasemodel(unittest.TestCase):
         model2 = BaseModel()
         self.assertIsInstance(model2, BaseModel)
 
+    def test_save_none(self):
+        """ testing save method with None argument"""
+
+        model4 = BaseModel()
+        with self.assertRaises(TypeError):
+            model4.save(None)
+
+    def test_save_updatedattr(self):
+        """ testing if updated_at attribute is changed after using
+        save method"""
+
+        model5 = BaseModel()
+        old_updated = model5.updated_at
+        model5.save()
+        self.assertNotEqual(old_updated, model5.updated_at)
+
+    def test_save_infile(self):
+        """ testing if the instance created is saved in the json file after
+        the saving method"""
+
+        model6 = BaseModel()
+        model6.save()
+        represen = "BaseModel." + model6.id
+        with open("file.json", "r") as file:
+            self.assertIn(represen, file.read())
+
+    @classmethod
+    def setUp(self):
+        try:
+            os.rename("file.json", "temp.json")
+        except IOError:
+            pass
+
+    @classmethod
+    def tearDown(self):
+        try:
+            os.remove("file.json")
+        except IOError:
+            pass
+        try:
+            os.rename("temp.json", "file.json")
+        except IOError:
+            pass
+
 
 if __name__ == "__main__":
     unittest.main()
