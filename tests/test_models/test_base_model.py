@@ -40,7 +40,16 @@ class Testbasemodel(unittest.TestCase):
 
     def test_toDict(self):
         """test cases for the to_dict method"""
-        pass
+
+        model3 = BaseModel()
+        model3.id = "117"
+        a = model3.created_at
+        b = model3.updated_at
+        c = type(model3).__name__
+        self.assertEqual(model3.id, model3.to_dict()["id"])
+        self.assertEqual(a.isoformat(), model3.to_dict()["created_at"])
+        self.assertEqual(b.isoformat(), model3.to_dict()["updated_at"])
+        self.assertEqual(c, model3.to_dict()["__class__"])
 
     def test_instant(self):
         """testing instantiation"""
