@@ -10,28 +10,35 @@ import os
 class TestingUser(unittest.TestCase):
     """ testing cases for user class"""
 
-    dicti_attr = {
-            "email": "",
-            "password": "",
-            "first_name": "",
-            "last_name": ""
-            }
-
     def test_attr(self):
-        """testing attributes"""
+        """test attributes"""
 
-        user = User()
-        for key, value in TestingUser.dicti_attr.items():
-            self.assertTrue(hasattr(user, key))
-            self.assertTrue(type(getattr(user, key)), type(value))
-        self.assertTrue(type(user.created_at), datetime)
+        user = BaseModel()
+        user.first_name = "YOlei"
+        user.id = "115"
+        user.password = "Yolei"
+        user.email = "yolei@gmail.com"
+        user.last_name = "leiyou"
+        self.assertTrue(hasattr(user, "first_name"))
+        self.assertTrue(hasattr(user, "last_name"))
+        self.assertTrue(hasattr(user, "password"))
+        self.assertTrue(hasattr(user, "email"))
+        self.assertTrue(hasattr(user, "id"))
+        self.assertEqual(str, type(user.id))
+        self.assertEqual(str, type(user.first_name))
+        self.assertEqual(str, type(user.last_name))
+        self.assertEqual(str, type(user.password))
+        self.assertEqual(str, type(user.email))
+        self.assertTrue(datetime, type(user.created_at))
+        self.assertTrue(datetime, type(user.updated_at))
+        self.assertEqual(len(user.__dict__), 7)
 
     def test_instant(self):
         """testing instantiation"""
 
         user1 = User()
-        self.assertIsInstance(user1, User)
-        self.assertTrue(issubclass(User, User))
+        self.assertIsInstance(user1, BaseModel)
+        self.assertTrue(issubclass(User, BaseModel))
 
     def test_represent(self):
         """test cases for the object representations"""
