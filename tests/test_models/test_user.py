@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """  unitests for user module"""
 import models
 import unittest
@@ -8,7 +9,7 @@ import os
 
 
 class TestingUser(unittest.TestCase):
-    """ testing cases for user class"""
+    """testing cases for user class"""
 
     def test_attr(self):
         """test attributes"""
@@ -68,14 +69,14 @@ class TestingUser(unittest.TestCase):
         self.assertEqual(c, user3.to_dict()["__class__"])
 
     def test_save_none(self):
-        """ testing save method with None argument"""
+        """testing save method with None argument"""
 
         user4 = User()
         with self.assertRaises(TypeError):
             user4.save(None)
 
     def test_save_updatedattr(self):
-        """ testing if updated_at attribute is changed after using
+        """testing if updated_at attribute is changed after using
         save method"""
 
         user5 = User()
@@ -84,7 +85,7 @@ class TestingUser(unittest.TestCase):
         self.assertNotEqual(old_updated, user5.updated_at)
 
     def test_save_infile(self):
-        """ testing if the instance created is saved in the json file after
+        """testing if the instance created is saved in the json file after
         the saving method"""
 
         user6 = User()
