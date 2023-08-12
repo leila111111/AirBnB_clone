@@ -4,7 +4,7 @@ import unittest
 from models.base_model import BaseModel
 from datetime import datetime
 import models
-
+import os
 
 class Testbasemodel(unittest.TestCase):
     """class created to do test cases
