@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """  unitests for user module"""
-import models
 import unittest
 from models.base_model import BaseModel
 from models.user import User
