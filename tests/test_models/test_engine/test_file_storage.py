@@ -30,6 +30,11 @@ class TestFilestorage(unittest.TestCase):
         except IOError:
             pass
 
+    def test_attr(self):
+        """Tests FileStorage attributes"""
+        self.assertTrue(hasattr(FileStorage, "_FileStorage__file_path"))
+        self.assertTrue(hasattr(FileStorage, "_FileStorage__objects"))
+
     def test_all(self):
         """testing the all method"""
 
@@ -44,6 +49,13 @@ class TestFilestorage(unittest.TestCase):
         with self.assertRaises(TypeError):
             store1.all(25)
 
+    def test_allnotempty(self):
+        """test all after saving if it is emtpy or not"""
+        base = BaseModel()
+        base.save()
+        dicts = models.storage.all()
+        self.assertTrue(dicts)
+
     def test_new(self):
         """testing the new method"""
 
@@ -53,7 +65,7 @@ class TestFilestorage(unittest.TestCase):
         store2.new(base2)
         self.assertIn("BaseModel.897", store2.all())
 
-    def test_Reload(self):
+    def test_reload(self):
         """testing the reload method"""
 
         base3 = BaseModel()
@@ -63,6 +75,11 @@ class TestFilestorage(unittest.TestCase):
         base3.save()
         storage.reload()
         self.assertIn("BaseModel.963", storage.all())
+
+    def test_reload_with_arg(self):
+        """test reload with argument"""
+        with self.assertRaises(TypeError):
+            models.storage.reload(None)
 
 
 if __name__ == "__main__":
