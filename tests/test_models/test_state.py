@@ -19,6 +19,8 @@ class TestingState(unittest.TestCase):
         state.id = "115"
         self.assertTrue(hasattr(state, "name"))
         self.assertTrue(hasattr(state, "id"))
+        self.assertTrue(hasattr(us, "created_at"))
+        self.assertTrue(hasattr(us, "updated_at"))
         self.assertEqual(str, type(state.id))
         self.assertEqual(str, type(state.name))
         self.assertTrue(datetime, type(state.created_at))
