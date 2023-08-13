@@ -15,17 +15,14 @@ class TestingState(unittest.TestCase):
         """test attributes"""
 
         state = State()
-        state.name = "NewYork"
-        state.id = "115"
         self.assertTrue(hasattr(state, "name"))
         self.assertTrue(hasattr(state, "id"))
         self.assertTrue(hasattr(state, "created_at"))
         self.assertTrue(hasattr(state, "updated_at"))
-        self.assertEqual(str, type(state.id))
-        self.assertEqual(str, type(state.name))
-        self.assertTrue(datetime, type(state.created_at))
-        self.assertTrue(datetime, type(state.updated_at))
-        self.assertEqual(len(state.__dict__), 4)
+        self.assertIsInstance(state.id, str)
+        self.assertIsInstance(state.created_at, datetime)
+        self.assertIsInstance(state.updated_at, datetime)
+        self.assertIsInstance(state.name, str)
 
     def test_instant(self):
         """testing instantiation"""
