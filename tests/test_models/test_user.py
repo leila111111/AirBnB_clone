@@ -17,7 +17,7 @@ class TestUser(unittest.TestCase):
     def test_user_attr(self):
         """test attributes"""
 
-        user = BaseModel()
+        user = User()
         user.first_name = "YOlei"
         user.id = "115"
         user.password = "Yolei"
@@ -40,7 +40,7 @@ class TestUser(unittest.TestCase):
     def test_user_instant(self):
         """testing instantiation"""
 
-        user1 = User()
+        user1 = BaseModel()
         self.assertIsInstance(user1, BaseModel)
         self.assertTrue(issubclass(User, BaseModel))
 

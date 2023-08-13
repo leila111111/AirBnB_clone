@@ -59,14 +59,14 @@ class Testbasemodel(unittest.TestCase):
         self.assertIsInstance(model2, BaseModel)
 
     def test_save_none(self):
-        """ testing save method with None argument"""
+        """testing save method with None argument"""
 
         model4 = BaseModel()
         with self.assertRaises(TypeError):
             model4.save(None)
 
     def test_save_updatedattr(self):
-        """ testing if updated_at attribute is changed after using
+        """testing if updated_at attribute is changed after using
         save method"""
 
         model5 = BaseModel()
@@ -75,7 +75,7 @@ class Testbasemodel(unittest.TestCase):
         self.assertNotEqual(old_updated, model5.updated_at)
 
     def test_save_infile(self):
-        """ testing if the instance created is saved in the json file after
+        """testing if the instance created is saved in the json file after
         the saving method"""
 
         model6 = BaseModel()
