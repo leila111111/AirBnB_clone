@@ -14,18 +14,6 @@ class TestingPlace(unittest.TestCase):
         """test attributes"""
         
         place = Place()
-        place.name = "calablanca"
-        place.user_id = "115"
-        place.amenity_ids = []
-        place.city_id = "345"
-        place.description = "beautiful place"
-        place.number_rooms = 3
-        place.number_bathrooms = 4
-        place.max_guest = 5
-        place.price_by_night = 345
-        place.latitude = 345.7585
-        place.longitude = 345.876
-
         self.assertTrue(hasattr(place, "longitude"))
         self.assertTrue(hasattr(place, "user_id"))
         self.assertTrue(hasattr(place, "amenity_ids"))
@@ -40,20 +28,19 @@ class TestingPlace(unittest.TestCase):
         self.assertTrue(hasattr(place, "created_at"))
         self.assertTrue(hasattr(place, "updated_at"))
 
-        self.assertEqual(int, type(place.number_rooms))
-        self.assertEqual(float, type(place.longitude))
-        self.assertEqual(float, type(place.latitude))
-        self.assertEqual(list, type(place.amenity_ids))
-        self.assertEqual(str, type(place.city_id))
-        self.assertEqual(str, type(place.user_id))
-        self.assertEqual(int, type(place.max_guest))
-        self.assertEqual(int, type(place.price_by_night))
-        self.assertEqual(str, type(place.description))
-        self.assertEqual(str, type(place.name))
-        self.assertEqual(int, type(place.number_bathrooms))
-        self.assertTrue(datetime, type(place.created_at))
-        self.assertTrue(datetime, type(place.updated_at))
-        self.assertEqual(len(place.__dict__), 14)
+        self.assertIsInstance(place.number_rooms, int)
+        self.assertIsInstance(place.longitude, float)
+        self.assertIsInstance(place.latitude, float)
+        self.assertIsInstance(place.amenity_ids, float)
+        self.assertIsInstance(place.city_id, str)
+        self.assertIsInstance(place.user_id, str)
+        self.assertIsInstance(place.max_guest, int)
+        self.assertIsInstance(place.price_by_night, int)
+        self.assertIsInstance(place.description, str)
+        self.assertIsInstance(place.name, str)
+        self.assertIsInstance(place.number_bathrooms, int)
+        self.assertIsInstance(place.created_at, datetime)
+        self.assertIsInstance(place.updated_at, datetime)
 
     def test_instant(self):
         """testing instantiation"""
