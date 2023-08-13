@@ -10,6 +10,10 @@ import os
 class TestUser(unittest.TestCase):
     """testing cases for user class"""
 
+    def test_class(self):
+        """Testing documentation"""
+        self.assertIsNotNone(User.__doc__)
+
     def test_user_attr(self):
         """test attributes"""
 
