@@ -10,7 +10,7 @@ import os
 class TestingUser(unittest.TestCase):
     """testing cases for user class"""
 
-    def test_attr(self):
+    def test_user_attr(self):
         """test attributes"""
 
         user = BaseModel()
@@ -33,14 +33,14 @@ class TestingUser(unittest.TestCase):
         self.assertTrue(datetime, type(user.updated_at))
         self.assertEqual(len(user.__dict__), 7)
 
-    def test_instant(self):
+    def test_user_instant(self):
         """testing instantiation"""
 
         user1 = User()
         self.assertIsInstance(user1, BaseModel)
         self.assertTrue(issubclass(User, BaseModel))
 
-    def test_represent(self):
+    def test_user_represent(self):
         """test cases for the object representations"""
 
         user1 = User()
@@ -54,7 +54,7 @@ class TestingUser(unittest.TestCase):
         self.assertIn("'updated_at': " + dateRep, string)
         self.assertIn("'id': '116'", string)
 
-    def test_toDict(self):
+    def test_user_toDict(self):
         """test cases for the to_dict method"""
 
         user3 = User()
@@ -67,14 +67,14 @@ class TestingUser(unittest.TestCase):
         self.assertEqual(b.isoformat(), user3.to_dict()["updated_at"])
         self.assertEqual(c, user3.to_dict()["__class__"])
 
-    def test_save_none(self):
+    def test_user_save_none(self):
         """testing save method with None argument"""
 
         user4 = User()
         with self.assertRaises(TypeError):
             user4.save(None)
 
-    def test_save_updatedattr(self):
+    def test_user_save_updatedattr(self):
         """testing if updated_at attribute is changed after using
         save method"""
 
@@ -83,7 +83,7 @@ class TestingUser(unittest.TestCase):
         user5.save()
         self.assertNotEqual(old_updated, user5.updated_at)
 
-    def test_save_infile(self):
+    def test_user_save_infile(self):
         """testing if the instance created is saved in the json file after
         the saving method"""
 
