@@ -40,7 +40,7 @@ class TestUser(unittest.TestCase):
     def test_user_instant(self):
         """testing instantiation"""
 
-        user1 = BaseModel()
+        user1 = User()
         self.assertIsInstance(user1, BaseModel)
         self.assertTrue(issubclass(User, BaseModel))
 
