@@ -7,7 +7,7 @@ from datetime import datetime
 import os
 
 
-class TestingUser(unittest.TestCase):
+class TestUser(unittest.TestCase):
     """testing cases for user class"""
 
     def test_user_attr(self):
