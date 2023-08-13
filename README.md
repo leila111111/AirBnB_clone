@@ -1,5 +1,5 @@
 # AirBnB clone
-![](aribnb.png.png)
+![](airbnb.png)
 
  This project present a first step towards builduing the AirBnB web application.
  The Backend of this project is written with python.
