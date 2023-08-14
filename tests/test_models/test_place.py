@@ -12,7 +12,7 @@ class TestingPlace(unittest.TestCase):
 
     def test_attr(self):
         """test attributes"""
-        
+
         place = Place()
         self.assertTrue(hasattr(place, "longitude"))
         self.assertTrue(hasattr(place, "user_id"))
@@ -31,7 +31,7 @@ class TestingPlace(unittest.TestCase):
         self.assertIsInstance(place.number_rooms, int)
         self.assertIsInstance(place.longitude, float)
         self.assertIsInstance(place.latitude, float)
-        self.assertIsInstance(place.amenity_ids, float)
+        self.assertIsInstance(place.amenity_ids, list)
         self.assertIsInstance(place.city_id, str)
         self.assertIsInstance(place.user_id, str)
         self.assertIsInstance(place.max_guest, int)

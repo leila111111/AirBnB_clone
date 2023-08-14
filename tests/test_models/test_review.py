@@ -14,18 +14,18 @@ class TestingReview(unittest.TestCase):
         """test attributes"""
 
         review = Review()
-        review.text = "good service"
-        review.user_id = "115"
-        review.place_id = "1000"
-        self.assertTrue(hasattr(review, "text"))
         self.assertTrue(hasattr(review, "user_id"))
         self.assertTrue(hasattr(review, "place_id"))
-        self.assertEqual(str, type(review.text))
-        self.assertEqual(str, type(review.place_id))
-        self.assertEqual(str, type(review.user_id))
-        self.assertTrue(datetime, type(review.created_at))
-        self.assertTrue(datetime, type(review.updated_at))
-        self.assertEqual(len(review.__dict__), 6)
+        self.assertTrue(hasattr(review, "text"))
+        self.assertTrue(hasattr(review, "id"))
+        self.assertTrue(hasattr(review, "created_at"))
+        self.assertTrue(hasattr(review, "updated_at"))
+        self.assertIsInstance(review.user_id, str)
+        self.assertIsInstance(review.text, str)
+        self.assertIsInstance(review.id, str)
+        self.assertIsInstance(review.place_id, str)
+        self.assertIsInstance(review.created_at, datetime)
+        self.assertIsInstance(review.updated_at, datetime)
 
     def test_instant(self):
         """testing instantiation"""

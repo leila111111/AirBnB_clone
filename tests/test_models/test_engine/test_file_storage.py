@@ -34,6 +34,8 @@ class TestFilestorage(unittest.TestCase):
         """Tests FileStorage attributes"""
         self.assertTrue(hasattr(FileStorage, "_FileStorage__file_path"))
         self.assertTrue(hasattr(FileStorage, "_FileStorage__objects"))
+        self.assertIsInstance(FileStorage._FileStorage__file_path, str)
+        self.assertIsInstance(FileStorage._FileStorage__objects, dict)
 
     def test_all(self):
         """testing the all method"""

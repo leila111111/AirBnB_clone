@@ -14,15 +14,14 @@ class TestingAmenity(unittest.TestCase):
         """test attributes"""
 
         amenity = Amenity()
-        amenity.name = "Wifi"
-        amenity.id = "115"
         self.assertTrue(hasattr(amenity, "name"))
         self.assertTrue(hasattr(amenity, "id"))
-        self.assertEqual(str, type(amenity.id))
-        self.assertEqual(str, type(amenity.name))
-        self.assertTrue(datetime, type(amenity.created_at))
-        self.assertTrue(datetime, type(amenity.updated_at))
-        self.assertEqual(len(amenity.__dict__), 4)
+        self.assertTrue(hasattr(amenity, "created_at"))
+        self.assertTrue(hasattr(amenity, "updated_at"))
+        self.assertIsInstance(amenity.created_at, datetime)
+        self.assertIsInstance(amenity.updated_at, datetime)
+        self.assertIsInstance(amenity.id, str)
+        self.assertIsInstance(amenity.name, str)
 
     def test_instant(self):
         """testing instantiation"""

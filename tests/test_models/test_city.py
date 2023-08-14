@@ -14,15 +14,16 @@ class TestingCity(unittest.TestCase):
         """test attributes"""
 
         city = City()
-        city.name = "NewYork"
-        city.id = "115"
         self.assertTrue(hasattr(city, "name"))
         self.assertTrue(hasattr(city, "id"))
-        self.assertEqual(str, type(city.id))
-        self.assertEqual(str, type(city.name))
-        self.assertTrue(datetime, type(city.created_at))
-        self.assertTrue(datetime, type(city.updated_at))
-        self.assertEqual(len(city.__dict__), 4)
+        self.assertTrue(hasattr(city, "created_at"))
+        self.assertTrue(hasattr(city, "updated_at"))
+        self.assertTrue(hasattr(city, "state_id"))
+        self.assertIsInstance(city.created_at, datetime)
+        self.assertIsInstance(city.updated_at, datetime)
+        self.assertIsInstance(city.id, str)
+        self.assertIsInstance(city.name, str)
+        self.assertIsInstance(city.state_id, str)
 
     def test_instant(self):
         """testing instantiation"""
