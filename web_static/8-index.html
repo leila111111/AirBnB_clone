@@ -1,155 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <title>Airbnb Clone</title>
-        <link rel="stylesheet" href="styles/4-common.css">
+        <meta charset="utf-8">
+        <title>
+            AirBnB clone
+        </title>
         <link rel="stylesheet" href="styles/3-header.css">
         <link rel="stylesheet" href="styles/3-footer.css">
+        <link rel="stylesheet" href="styles/4-common.css">
         <link rel="stylesheet" href="styles/6-filters.css">
         <link rel="stylesheet" href="styles/8-places.css">
-
-        <link rel="icon" href="images/icon.png" type="image/x-icon">
+        <link rel="icon" href="images/icon.png">
     </head>
     <body>
         <header>
         </header>
-
-        <div class="container">
-            <section class="filters">
+        <div class = "container" >
+            <section class = "filters">
                 <button>
                     Search
                 </button>
                 <div class="locations">
                     <h3>States</h3>
-                    <h4>NewYork, California...</h4>
+                    <h4>California, Arizona...</h4>
                     <ul class="popover">
                         <li>
-                            <h2>Arizona:</h2>
-                            <ul>
-                                <li>page</li>
+                            <h2>
+                                Arizona:
+                            </h2>
+                        </li>
+                        <li>
+                            <ul class="the_list">
+                                <li>
+                                    Page
+                                </li>
+                                <li>
+                                    Page2
+                                </li>
                             </ul>
                         </li>
                         <li>
-                            <h2>California:</h2>
-                            <ul>
-                                <li>page2</li>
-                                <li>page3</li>
-                            </ul>
+                            <h2>
+                                California:
+                            </h2>
                         </li>
+                        <li>
+                                <ul class="the_list">
+                                    <li>
+                                        San Francisco
+                                    </li>
+                                    <li>
+                                        Los Altos
+                                    </li>
+                                </ul>
+                            </li>
                     </ul>
                 </div>
                 <div class="amenities">
                     <h3>Amenities</h3>
-                    <h4>Wifi, swiming pool...</h4>
+                    <h4>Internet, Kitchen...</h4>
                     <ul class="popover">
                         <li>Internet</li>
-                        <li>Tv</li>
+                        <li>TV</li>
                         <li>Kitchen</li>
+                        <li>Iron</li>
                     </ul>
                 </div>
-                
             </section>
-
-
-
-            <section class="places">
-                
-                <h1>Places</h1>
-                
-                
-                <article>
-                    <h2>My home</h2>
-                    <div class="price_by_night">
-                        $80
-                    </div>
-                    
-                    <div class="information">
-                        <div class="max_guest">
-                            2 Guests
+            <section class = "places">
+                <div class = "title">
+                    <h1>
+                        Places
+                    </h1>
+                </div>      
+                <div class = "article">
+                    <article>
+                        <div class="title_price">
+                            <div class="title">
+                                <h2>
+                                    My home
+                                </h2>
+                            </div>
+                            <div class="price_by_night">
+                                <div class="price">
+                                    $80
+                                </div>
+                            </div>
                         </div>
-                        <div class="number_rooms">
-                            1 Bedroom
+                        <div class="information">
+                            <div class="max_guest">
+                                2 Guests                  
+                            </div>
+                            <div class="number_rooms">
+                                1 Bedroom
+                            </div>
+                            <div class="number_bathrooms">
+                                1 Bathroom
+                            </div>
                         </div>
-                        <div class="number_bathrooms">
-                            1 Bathroom
+                        <div class="user">
+                            <b>
+                                Owner:
+                            </b>
+                             John Lennon
                         </div>
-
-                    </div>
-
-                    <div class="user">
-                        <p><strong>Owner:</strong> Jack Kley</p>
-                    </div>
-                    <div class="description">
-                        <p>A house with reliable wifi and spacious bedrooms is essential for a comfortable and convenient living experience. Discover the key factors to consider when looking for your dream home.</p>
-                        
-                    </div>
-                </article>
-
-
-
-                <article>
-                    <h2>Tiny house</h2>
-                    <div class="price_by_night">
-                        $65
-                    </div>
-                    <div class="information">
-                        <div class="max_guest">
-                            1 Guests
+                        <div class="description">
+                            This is a lovely 1 bedroom and 1 bathroom apartment that can
+                            accomodate 2 people. It locates at center of Shangai
+                            and next to subway line 1. 1 stop to People Square, 2 stops to
+                            Bund, 3 stops to Jingan Temple.
                         </div>
-                        <div class="number_rooms">
-                            1 Bedrooms
+                    </article>
+                    <article>
+                        <div class="title_price">
+                            <div class="title">
+                                <h2>
+                                    Tiny house
+                                </h2>
+                            </div>
+                            <div class="price_by_night">
+                                <div class="price">
+                                    $80
+                                </div>
+                            </div>
                         </div>
-                        <div class="number_bathrooms">
-                            1 Bathrooms
+                        <div class="information">
+                            <div class="max_guest">
+                                4 Guests
+                            </div>
+                            <div class="number_rooms">
+                                2 Bedrooms
+                            </div>
+                            <div class="number_bathrooms">
+                                1 Bathroom
+                            </div>
                         </div>
-
-                    </div>
-
-                    <div class="user">
-                        <p><strong>Owner:</strong> July bardy</p>
-                    </div>
-                    <div class="description">
-                        <p>A house with reliable wifi and spacious bedrooms is essential for a comfortable and convenient living experience. Discover the key factors to consider when looking for your dream homeA house with reliable wifi and spacious bedrooms is essential for a comfortable and convenient living experience. Discover the key factors to consider when looking for your dream home. </p>
-                    </div>
-                    
-                </article>
-                <article>
-                    <h2>A suite</h2>
-                    <div class="price_by_night">
-                        $190
-                    </div>
-
-                    <div class="information">
-                        <div class="max_guest">
-                            4 Guests
+                        <div class="user">
+                            <b>
+                                Owner:</b>
+                                 Adrienne
                         </div>
-                        <div class="number_rooms">
-                            2 Bedroom
+                        <div class="description">
+                            Our place is a private, affordable stand-alone guest house
+                            centrally located just minutes to French Quarters, downtown,
+                            The Fair Groundz(Jazz Fest) and City Park. The guest house is
+                            a quaint, 400 square ft. with a full bath, mini kitchen, & living
+                            room. The extra high cellings make the home feel more
+                            spacious. The sofa converts to a bed also. We have a hand
+                            made counter area that adds character to the room and a
+                            great porch/deck to relax on and have a glass of Merlot.
+    
                         </div>
-                        <div class="number_bathrooms">
-                            2 Bathroom
+                    </article>
+                    <article>
+                        <div class="title_price">
+                            <div class="title">
+                                <h2>
+                                    A suite
+                                </h2>
+                            </div>
+                            <div class="price_by_night">
+                                <div class="price">
+                                    $190
+                                </div>
+                            </div>
                         </div>
-
-                    </div>
-
-                    <div class="user">
-                        <p><strong>Owner:</strong> Sofia Radi</p>
-                    </div>
-                    <div class="description">
-                        <p>A house with reliable wifi and spacious bedrooms is essential for a comfortable and convenient living experience. Discover the key factors to consider when looking for your dream homeA house with reliable wifi and spacious bedrooms is essential for a comfortable and convenient living experience. Discover the key factors to consider when looking for your dream home A house with reliable wifi and spacious bedrooms is essential for a comfortable and convenient living experience. Discover the key factors to consider when looking for your dream home. </p>
-                        
-                    </div>
-                    
-                    
-                </article>
+                        <div class="information">
+                            <div class="max_guest">
+                                2 Guests
+                            </div>
+                            <div class="number_rooms">
+                                1 Bedroom
+                            </div>
+                            <div class="number_bathrooms">
+                                1 Bathroom
+                            </div>
+                        </div>
+                        <div class="user">
+                            <b>Owner:</b> Bill Zuckerberg
+                        </div>
+                        <div class="description">
+                            Newly renovated spacios 2 bedrooms 2 baths in cozy
+                            Gastown style unit with the views of north shore mountains.
+                        </div>
+                    </article>
+                </div>
             </section>
-            
         </div>
-
         <footer>
             Best School
         </footer>
     </body>
-
 </html>
